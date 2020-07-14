@@ -4,6 +4,7 @@ require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
+  target: 'static',
 
   /*
   ** Headers of the page
@@ -51,10 +52,10 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
-  axios: {
-    baseURL: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
-    credentials: false
-  },
+  // axios: {
+  //   baseURL: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
+  //   credentials: false
+  // },
 
   /*
   ** Build configuration

@@ -7,13 +7,15 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
-    "serve": "nuxt serve"
+    "serve": "nuxt serve",
+    "gen": "nuxt build && nuxt export"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
+    "localStorage": "^1.0.4",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {}
