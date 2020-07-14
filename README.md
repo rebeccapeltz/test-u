@@ -18,3 +18,14 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## firebase local emulator
+
+https://firebase.google.com/docs/functions/local-emulator
+
+export GOOGLE_APPLICATION_CREDENTIALS=path to json
+firebase emulators:start
+
+## Deploy to Heroku
+https://www.youtube.com/watch?v=nngsKhTb2BA
