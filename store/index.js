@@ -1,5 +1,6 @@
 import Vuex from "vuex";
 import Cookie from "js-cookie";
+import localStorage from "localStorage";
 
 const createStore = () => {
   return new Vuex.Store({
