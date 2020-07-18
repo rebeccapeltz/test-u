@@ -62,7 +62,7 @@ module.exports = {
       }
   },
   axios: {
-    baseURL: process.env.VERCEL_URL || 'http://localhost:3000/api' ,
+    baseURL: process.env.PROD_URL || 'http://localhost:3000/api' ,
     credentials: false
   },
 
