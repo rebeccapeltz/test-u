@@ -55,7 +55,7 @@ module.exports = {
   ],
   proxy: {
     '/api': {
-      target: process.env.BASE_URL,
+      target: 'https://test-u-git-master.rebeccapeltz.vercel.app',
       pathRewrite: {
         '^/api' : '/'
         }
