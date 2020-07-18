@@ -52,10 +52,10 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
-  // axios: {
-  //   baseURL: process.env.BASE_URL || 'https://nuxt-blog.firebaseio.com',
-  //   credentials: false
-  // },
+  axios: {
+    baseURL: process.env.VERCEL_URL || 'http://localhost:3000/api' ,
+    credentials: false
+  },
 
   /*
   ** Build configuration
@@ -69,9 +69,9 @@ module.exports = {
     }
   },
   env: {
-    fbBaseUrl: process.env.BASE_URL || 'https://test-u-242d7.firebaseio.com/',
+    fbBaseUrl: process.env.FB_BASE_URL || 'https://test-u-242d7.firebaseio.com',
     fbAPIKey: process.env.FIREBASE_KEY || '',
-    BASE_URL: process.env.BASE_URL || 'http://localhost:3000/api'
+    BASE_URL: process.env.VERCEL_URL || 'http://localhost:3000/api'
   },
   pageTransition: {
     name: 'fade',
