@@ -29,3 +29,18 @@ firebase emulators:start
 
 ## Deploy to Heroku
 https://www.youtube.com/watch?v=nngsKhTb2BA
+
+
+## scrimba on vuex module store
+https://scrimba.com/p/pnyzgAP/cqKK4psq
+
+```
+  computed: mapState({
+        a: state => state.a.count,
+        b: state => state.b.count,
+    })
+
+    methods: mapActions('some/nested/module', [
+        'foo' // thisfoo()
+    ])
+    ```

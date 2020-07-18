@@ -6,12 +6,11 @@
         <ul class="nav-list" @click="$emit('close')">
           <li class="nav-item"><nuxt-link to="/posts">Blog</nuxt-link></li>
           <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
-          <li class="nav-item">
-            <nuxt-link to="/admin">Login/Register</nuxt-link>
+          <li class="nav-item" v-if="isAuthenticated">
+            <a href="" @click="onLogout">Log out</a>
           </li>
-          <!-- <li class="nav-item"><nuxt-link to="/admin">Register</nuxt-link></li> -->
-          <li class="nav-item" v-if="isAuthenticated" @click="onLogout">
-            >Logout
+          <li class="nav-item" v-else>
+            <nuxt-link to="/admin">Log in/Register</nuxt-link>
           </li>
         </ul>
       </div>
@@ -20,6 +19,8 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from "vuex";
+
 export default {
   name: "TheSidenav",
   props: {
@@ -35,9 +36,16 @@ export default {
     },
     computed: {
       isAuthenticated() {
-        // console.log("sidenav", this.$store.getters.isAuthenticated);
         return this.$store.getters.isAuthenticated;
       }
+      //  ...mapGetters({
+      //   isAuthenticated: 'isAuthenticated',
+      // }),
+
+      // isAuthenticated() {
+      //   // console.log("sidenav", this.$store.getters.isAuthenticated);
+      //   return this.$store.getters.isAuthenticated;
+      // }
     }
   }
 };

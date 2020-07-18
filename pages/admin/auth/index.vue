@@ -8,7 +8,9 @@
         <AppControlInput type="password" v-model="password"
           >Password</AppControlInput
         >
-        <AppButton type="submit">{{ isLogin ? "Login" : "Register" }}</AppButton>
+        <AppButton type="submit">{{
+          isLogin ? "Login" : "Register"
+        }}</AppButton>
         <AppButton
           type="button"
           btn-style="inverted"
@@ -17,11 +19,16 @@
           >Switch to {{ isLogin ? "Register" : "Login" }}</AppButton
         >
       </form>
+      <p>
+        is authenticated: <span>{{ isAuthenticated }}</span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapState } from "vuex";
+
 // CLIENT
 export default {
   name: "AdminAuthPage",
@@ -29,9 +36,36 @@ export default {
   data() {
     return {
       isLogin: true,
-      email: "",
-      password: ""
+      email: "rpeltz@gmail.com",
+      password: "Blah7!",
+      isLoggedIn: false
     };
+  },
+  computed: {
+    fbAPIKey: function() {
+      return process.env.fbAPIKey;
+    },
+    baseURL: function() {
+      return process.env.BASE_URL;
+    },
+    // ...mapGetters(['isAuthenticated']),
+   isAuthenticated(){
+      return this.$store.getters.isAuthenticated;
+    }
+    // ...mapState({
+    //   token: state => state.token
+    // })
+  },
+
+  // watch: {
+  //   isAuthenticated(value) {
+  //     console.log("watching isAuthenticated", value);
+  //   }
+  // },
+
+  created() {
+    // set the initial value to be the same as the one in vuex
+    // this.isLoggedIn = this.isAuthenticated;
   },
   methods: {
     onSubmit() {
@@ -39,7 +73,9 @@ export default {
         .dispatch("authenticateUser", {
           isLogin: this.isLogin,
           email: this.email,
-          password: this.password
+          password: this.password,
+          fbAPIKey: this.fbAPIKey,
+          baseURL: this.baseURL
         })
         .then(() => {
           console.log("client auth success");
