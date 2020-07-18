@@ -84,7 +84,7 @@ module.exports = {
   },
   pageTransition: {
     name: 'fade',
-    mode: 'out-in'
+    mode: 'out-in' 
   },
   // router: {
   //   middleware: 'log'
