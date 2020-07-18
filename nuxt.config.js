@@ -51,7 +51,16 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  proxy: {
+    '/api': {
+      target: process.env.BASE_URL,
+      pathRewrite: {
+        '^/api' : '/'
+        }
+      }
+  },
   axios: {
     baseURL: process.env.VERCEL_URL || 'http://localhost:3000/api' ,
     credentials: false
