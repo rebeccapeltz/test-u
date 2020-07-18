@@ -45,8 +45,8 @@ const createStore = () => {
               new Date().getTime() + Number.parseInt(result.expiresIn) * 1000
             );
             console.log("login:",this.getters.isAuthenticated)
-            debugger
-            return this.$axios.$post(`${process.env.BASE_URL}/track-data`, {data: 'Authenticated!'})
+            let proto = process.env.BASE_URL.includes('localhost')? 'http' : 'https'
+            return this.$axios.$post(`${proto}://${process.env.BASE_URL}/track-data`, {data: 'Authenticated!'})
           })
           .catch(e => console.log("Error in authenticate user", e));
       },
