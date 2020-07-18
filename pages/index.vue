@@ -1,12 +1,11 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Get the latest tech news!</h1>
+      <h1>Video</h1>
     </section>
     Hi
     <!-- <PostList :posts="loadedPosts" /> -->
-        <!-- <PostList  /> -->
-
+    <!-- <PostList  /> -->
   </div>
 </template>
 
@@ -32,7 +31,13 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  background-image: url("~assets/images/main-page-background.jpg");
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 19, 121, 1) 12%,
+    rgba(0, 212, 255, 1) 100%
+  );
   background-position: center;
   background-size: cover;
 }
