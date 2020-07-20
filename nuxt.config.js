@@ -17,7 +17,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'My cool Web Development Blog' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Open+Sans" }
     ]
   },
