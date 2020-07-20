@@ -37,3 +37,7 @@ heroku config:set HOST=0.0.0.0
 heroku config:set NODE_ENV=production
 
 https://dashboard.heroku.com/apps/cld-u-tube
+
+```bash
+git push heroku master
+```
