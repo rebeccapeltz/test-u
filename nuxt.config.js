@@ -4,7 +4,7 @@ require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
-  target: 'static',
+  target: 'server',
 
   /*
   ** Headers of the page
@@ -80,7 +80,7 @@ module.exports = {
   env: {
     fbBaseUrl: process.env.FB_BASE_URL || 'https://test-u-242d7.firebaseio.com',
     fbAPIKey: process.env.FIREBASE_KEY || '',
-    BASE_URL: process.env.PROD_URL || 'http://localhost:3000/api'
+    BASE_URL: process.env.PROD_URL || 'http://localhost:3000'
   },
   pageTransition: {
     name: 'fade',

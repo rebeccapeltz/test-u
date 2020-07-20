@@ -9,6 +9,7 @@
     "export": "nuxt export",
     "serve": "nuxt serve",
     "gen": "nuxt build && nuxt export",
+    "heroku-postbuild": "npm run build",
     "vercel-hook": "curl -X POST https://api.vercel.com/v1/integrations/deploy/QmSTM6uXVGB88TYNo6dd5r2QA63Z4tihmcU7i5yfgTNcwB/X4KxFUU2PW"
   },
   "dependencies": {
