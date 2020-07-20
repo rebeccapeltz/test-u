@@ -92,3 +92,5 @@ sw.*
 # ignore test files
 test-u-*
 firebase.json
+
+.heroku-config

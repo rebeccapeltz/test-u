@@ -29,3 +29,11 @@ firebase emulators:start
 
 ## Deploy to Heroku
 https://www.youtube.com/watch?v=nngsKhTb2BA
+
+
+https://medium.com/@ale_colombo/deploy-nuxt-js-app-on-heroku-531a935bce90
+
+heroku config:set HOST=0.0.0.0
+heroku config:set NODE_ENV=production
+
+https://dashboard.heroku.com/apps/cld-u-tube
