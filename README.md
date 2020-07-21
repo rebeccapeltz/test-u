@@ -41,3 +41,14 @@ https://dashboard.heroku.com/apps/cld-u-tube
 ```bash
 git push heroku master
 ```
+
+## Pexels
+Record Playing
+Video by Atakan Ozkan from Pexels
+
+
+## list api
+https://res.cloudinary.com/${CLOUD_NAME}/image/list/v${Date.now()}/student-id.json
+https://res.cloudinary.com/u-tube/image/list/u-tube.json
+
+uncheck resource list

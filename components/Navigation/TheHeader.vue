@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     isAuthenticated() {
-      debugger;
+      // debugger;
       console.log("header report", this.$store.getters.isAuthenticated);
       return this.$store.getters.isAuthenticated;
     }

@@ -3,27 +3,50 @@
     <section class="intro">
       <h1>Video</h1>
     </section>
-    Hi
+
     <!-- <PostList :posts="loadedPosts" /> -->
     <!-- <PostList  /> -->
+    <VideoList :videos="upLoadedVideos" />
   </div>
 </template>
 
 <script>
-export default {
-  computed: {
-    // loadedPosts() {
-    //   return this.$store.getters.loadedPosts
-    // }
-  }
-  // data() {
-  //   return {
-  //     loadedPosts: []
-  //   };
-  // },
-};
-</script>
+import VideoList from '@/components/Videos/VideoList'
+import { mapState, mapGetters } from 'vuex'
 
+export default {
+  components: {
+    VideoList
+  },
+  middleware: 'log',
+  computed: {
+    // ...mapState({
+    //   token: state => state.token,
+    //   uploadedVideos: state=> state.uploadedVideos
+    // }),
+    // ...mapGetters({
+    //   getUploadedVideos: 'uploadedVideos',
+    // }),
+    upLoadedVideos() {
+      const videoArray = this.$store.getters.getUploadedVideos
+      debugger
+      const data = [
+        {
+          public_id: 'gnqerxbalb3n0edwuxtp',
+          version: 1595275488,
+          format: 'mp4',
+          width: 1080,
+          height: 1920,
+          type: 'upload',
+          created_at: '2020-07-20T20:04:48Z',
+          tags: ['u-tube']
+        }
+      ]
+      return this.$store.getters.getUploadedVideos || data
+    }
+  }
+}
+</script>
 
 <style scoped>
 .intro {
